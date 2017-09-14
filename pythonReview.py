@@ -28,6 +28,7 @@ class imageHandler():
 
 
 	def turn90DegRight(self):
+		
 		imagetemp = [[0 for x in xrange(self.size)] for x in xrange(self.size)]
 
 		for j in xrange(self.size):
@@ -48,7 +49,7 @@ data = data.split(',')
 for ch in data:
 		value.append(int(ch))
 
-
+'''
 image = imageHandler(value,4)
 image.printImage()
 image.turn90DegRight()
@@ -56,3 +57,32 @@ image.turn90DegRight()
 image.turn90DegRight()
 image.turn90DegRight()
 image.printImage()
+'''
+
+import random
+def testCaseGUID(testcaseNum = 1): #10
+	for x in xrange(testcaseNum):
+		ids = random.randint(0,999) 
+		yield "Testcase number # " + str(ids)
+
+'''
+id = testCaseGUID(3)
+
+print id.next()
+print id.next()
+print id.next()
+print id.next()
+'''
+
+ar = list([3,2,1,4,34,23,13])
+ar.sort()
+print ar
+
+
+a = open("data.txt", "r")
+print a.readline()
+a.close()
+
+b = open("write.txt", "w")
+b.write(str(ar))
+b.close()
